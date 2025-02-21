@@ -1,9 +1,9 @@
 <div class="p-4">
-    <app-header-page-ajouter
-      title="Ajouter Service"
-      (onCreate)="addProduit()"
-      (onCancel)="resetForm()"
-    ></app-header-page-ajouter>
+    <app-header-page
+    title="Ajouter Service"
+    [buttonInfos]="buttonInfos"
+  ></app-header-page>
+
   
     <app-service-details
       [service]="newService"

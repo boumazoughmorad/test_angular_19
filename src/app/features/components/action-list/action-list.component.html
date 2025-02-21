@@ -1,0 +1,18 @@
+
+<div
+  class="rounded-full w-7 h-7 items-center justify-center flex cursor-pointer"
+  [ngClass]="isMenuVisible ? 'bg-[var(--primary)]' : 'bg-white'"
+  (click)="toggleMenu()"
+>
+  <mat-icon>ads_click</mat-icon>
+</div>
+
+<ul
+  class="absolute shadow-md text-[var(--primary-foreground)] z-30 bg-white whitespace-nowrap p-2"
+  [class.hidden]="!isMenuVisible"
+>
+  <app-item-action icon="remove_red_eye" label="Voir détail" (actionClick)="viewDetail()"></app-item-action>
+  <app-item-action icon="edit" label="Modifier" (actionClick)="editProduit()"></app-item-action>
+  <app-item-action icon="delete_outline" label="Supprimer" (actionClick)="deleteProduit()"></app-item-action>
+  <app-item-action icon="control_point_duplicate" label="Dupliquer" (actionClick)="duplicateProduit()"></app-item-action>
+</ul>

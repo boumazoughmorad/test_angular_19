@@ -1,0 +1,8 @@
+<div class="sm:p-4 p-0 py-4">
+    <app-header-page
+      title="Liste des Services"
+      [buttonInfos]="buttonInfos"
+    ></app-header-page>
+    <app-list-filters (filterChange)="onFilterChange($event)"></app-list-filters>
+    <app-list-table [filterCriteria]="filterCriteria" ></app-list-table>
+</div>

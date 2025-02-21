@@ -1,0 +1,15 @@
+<div class="page-header">
+    <h1>{{ title }}</h1>
+    <div class="flex space-x-4 ">
+      <button 
+        *ngFor="let button of buttonInfos" 
+        (click)="button.action()" 
+        class="btn flex items-center justify-center" 
+        [ngClass]="button.style"
+      >
+        <mat-icon *ngIf="button.icon">{{ button.icon }}</mat-icon>
+        {{ button.name }}
+      </button>
+    </div>
+  </div>
+  

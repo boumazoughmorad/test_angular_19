@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './price-details.component.css'
 })
 export class PriceDetailsComponent {
-  @Input() price: { prixVente: number; tva: number } = { prixVente: 0, tva: 0 }; // Input for price details
-  @Input() tvaOptions: number[] = []; // Input for TVA options
-  @Output() onSubmit = new EventEmitter<void>(); // Event emitter for form submission
+  @Input() price: { prixVente: number; tva: number } = { prixVente: 0, tva: 0 }; 
+  @Input() tvaOptions: number[] = []; 
+  @Output() onSubmit = new EventEmitter<void>(); 
 }

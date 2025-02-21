@@ -1,0 +1,37 @@
+<table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Nom du Service</th>
+        <th>Catégories</th>
+        <th>Status</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produit of paginatedProduits">
+        <td class="relative">
+          <img [src]="produit.image" class="sm:w-20 w-5 h-auto" />
+        </td>
+        <td>{{ produit.name }}</td>
+        <td>{{ getCategoryName(produit.id_category||0)}}</td>
+        <td>
+            <span class="rounded-full " [ngClass]="{'bg-green-200': produit.status, 'bg-gray-200': !produit.status}">
+                {{ produit.status ? 'Active' : 'Inactive' }}
+            </span>
+            </td>
+        <td>{{ produit.prix | currency }}  </td>
+        <td class="relative">
+           
+          <app-action-list [produitId]="produit.id" ></app-action-list>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <app-pagination
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  (pageChange)="changePage($event)"
+></app-pagination>

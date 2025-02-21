@@ -3,13 +3,15 @@
       <mat-icon>{{ icon }}</mat-icon>
     </div>
   
-     <div *ngIf="havelist && (label || items.length > 0)" class="absolute hidden group-hover:flex flex-row w-auto left-full ml-2 top-0 z-50">
+     <div *ngIf="havelist && (label || items.length > 0)" class="absolute hidden group-hover:flex flex-row w-auto left-full ml-2 top-0 z-50 ">
       <mat-icon class="text-[var(--primary)]">arrow_left</mat-icon>
-      <div class="bg-[var(--primary)] p-2 rounded text-white">
+      <div class="bg-[var(--primary)] p-2 rounded text-white px-4">
         <h4 *ngIf="label" class="underline whitespace-nowrap overflow-hidden truncate">{{ label }}</h4>
   
          <ul *ngIf="items.length > 0">
-            <li *ngFor="let item of items">{{ item }}</li>
+            <li *ngFor="let item of items ">
+              <span class="whitespace-nowrap font-medium text-[12px] "> {{ item }}</span>
+             </li>
        
             </ul>
       </div>

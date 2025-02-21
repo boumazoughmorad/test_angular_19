@@ -26,21 +26,25 @@
 }
 @layer base {
     body {
-      @apply bg-[var(--background)] text-[var(--foreground)] text-[10px] font-bold;
+      @apply bg-[var(--background)] text-gray-400    text-[14px] font-bold ;
     }
   
     h1 {
-      @apply  text-[14px] font-bold text-[var(--primary)];
+      @apply  text-[18px] font-bold text-[var(--primary)];
     }
   
     h2 {
-      @apply  text-[12px]  font-normal text-[var(--primary-foreground)] mb-4;
+      @apply  text-[16px]  font-normal text-[var(--primary-foreground)] mb-4;
     }
   
     input,
-    textarea,
-    select{
+    textarea{
         @apply p-4  bg-[var(--input-backgroud)]  border-1 border-[var(--primary-foreground)] rounded-lg focus:ring-blue-500 focus:border-[var(--primary)] block w-full sm:w-[25vw]   h-[35px];
+    }
+
+
+    select{
+        @apply p-2 bg-[var(--input-backgroud)] text-[var(--primary-foreground)]  border-1 border-[var(--primary-foreground)] rounded-lg focus:ring-blue-500 focus:border-[var(--primary)] block w-full sm:w-[25vw]   h-[35px];
     }
   
     label{
@@ -66,5 +70,60 @@
 
     .page-header{
         @apply flex sm:flex-row flex-col gap-4 sm:justify-between items-center
+    }
+
+    .filter-select{
+        @apply w-auto rounded-full bg-[var(--backgroud)]
+    }
+
+    .search-input{
+        @apply bg-[var(--backgoud)] border-none border-b-4 border-b-[var(--primary-foreground)]   w-full  h-full 
+    }
+
+
+    table{
+        @apply w-full text-left rtl:text-right  p-2 my-4 
+    }
+
+    thead{
+        @apply text-xs  uppercase  text-[var(--primary)] bg-[var(--button-backgroud)] 
+    }
+
+    th{
+        @apply sm:px-6 py-3 px-1
+    }
+    td{
+        @apply  sm:px-6 py-4 border-gray-500 border-b-1 px-1
+    }
+
+    header{
+        @apply fixed w-screen top-0 shadow-md py-3 px-6 flex justify-end items-center z-30 gap-4 bg-[var(--backgroud)]
+    }
+    header > div {
+        @apply flex items-center gap-4  
+    }
+
+    nav{
+        @apply fixed left-0 sm:flex flex-col justify-center items-center h-screen shadow-md z-50 bg-white hidden pl-2
+    }
+
+    .nav-items{
+        @apply flex flex-col items-center space-y-8 mt-8 
+    }
+
+    .item-action{
+        @apply flex items-center justify-center gap-1 cursor-pointer
+    }
+
+    .filter{
+        @apply flex items-center justify-between p-4 md:flex-row flex-col m-5
+    }
+
+    .pagination{
+        @apply flex sm:justify-end items-center  gap-8 justify-center sm:flex-row flex-col
+    }
+
+    .pagination-control{
+        @apply flex justify-end items-end gap-4
     }
   }

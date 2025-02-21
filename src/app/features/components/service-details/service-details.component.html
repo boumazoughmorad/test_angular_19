@@ -1,7 +1,7 @@
 <div class="card">
     <h2 >Details du service</h2>
     <form (ngSubmit)="onSubmit.emit()" >
-      <!-- Product Name and Description -->
+
       <div class="flex flex-col gap-4">
         <div>
           <label  for="productName">Product Name</label>
@@ -26,12 +26,11 @@
         </div>
       </div>
   
-      <!-- File Upload -->
+>
       <div class="flex flex-col w-full sm:w-[35vw]">
         <p class="">Photos</p>
   
         <div class="flex items-center justify-center w-full">
-          <!-- Si une image est sélectionnée, affiche l'aperçu -->
           <div *ngIf="imagePreview; else fileUpload" class="relative">
             <img [src]="imagePreview" alt="Aperçu de l'image" class="w-32 h-32 object-cover rounded-lg" />
             <button type="button" (click)="removeImage()" class="absolute top-0 right-0 bg-red-500 text-white p-1 rounded-full">
@@ -39,7 +38,7 @@
             </button>
           </div>
   
-          <!-- Champ de téléchargement si aucune image n'est sélectionnée -->
+        
           <ng-template #fileUpload>
             <label for="dropzone-file" class="flex flex-col items-center justify-center w-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer hover:bg-gray-100">
               <div class="flex flex-col items-center justify-center pt-5 pb-6">
@@ -51,7 +50,7 @@
                   <p class="">Sélectionnez-le depuis votre ordinateur</p>
                 </div>
               </div>
-              <input id="dropzone-file" type="file" class="hidden" (change)="onFileChange($event)" name="image" required />
+              <input id="dropzone-file" type="file" class="hidden" (change)="onFileChange($event)" name="image"  required />
             </label>
           </ng-template>
         </div>

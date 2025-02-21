@@ -1,4 +1,4 @@
-<div class="fixed left-0 sm:flex flex-col justify-center items-center h-screen shadow-md z-50 bg-white hidden pl-2">
+<nav >
    
     <div class="flex justify-center items-center p-4">
         <div class="text-[var(--primary)] ">
@@ -8,15 +8,15 @@
     </div>
   
    
-    <div class="flex flex-col items-center space-y-8 mt-8">
+    <div class="nav-items">
 
    
         <app-nav-item icon="dashboard" label="Tableau de bord" [items]="dashboardItems" [havelist]="true"></app-nav-item>
         <app-nav-item icon="person" label="Contact" [items]="contactItems" [havelist]="true"></app-nav-item>
         <app-nav-item icon="storage" label="Catalogue" [items]="catalogueItems" [havelist]="true"></app-nav-item>
-        <app-nav-item icon="picture_as_pdf" label="Vente" [items]="catalogueItems" [havelist]="true"></app-nav-item>
-        <app-nav-item icon="shopping_cart" label="Achat" [items]="catalogueItems" [havelist]="true"></app-nav-item>
-        <app-nav-item icon="access_time" label="Opportunité" [items]="catalogueItems" [havelist]="true"></app-nav-item>
+        <app-nav-item icon="picture_as_pdf" label="Vente" [items]="venteItems" [havelist]="true"></app-nav-item>
+        <app-nav-item icon="shopping_cart" label="Achat" [items]="achatItems" [havelist]="true"></app-nav-item>
+        <app-nav-item icon="access_time" label="Opportunité" [items]="oppertuniteItems" [havelist]="true"></app-nav-item>
         <app-nav-item icon="podcasts" label="" [items]="[]" [havelist]="false"></app-nav-item>
  
 
@@ -31,4 +31,4 @@
       <mat-icon>logout</mat-icon>
         </div>
     </div>
-  </div>
+  </nav>

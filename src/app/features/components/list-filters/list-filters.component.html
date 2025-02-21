@@ -1,0 +1,32 @@
+<div class="filter">
+    <div class="flex items-center gap-2">
+        <div class="flex text-[var(--primary-foreground)] items-center ">
+            <div >
+                <mat-icon>filter_list</mat-icon>
+            </div>
+            <p>Filter par</p>
+        </div>
+        <div>
+           
+            <select id="category" [(ngModel)]="selectedCategory_id" (change)="onFilterChange()" class="filter-select" >
+                
+              <option value="" >All Categories</option>
+              <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+            </select>
+          </div>
+        
+          <div>
+           
+            <select id="status" [(ngModel)]="selectedStatus" (change)="onFilterChange()" class="filter-select">
+              <option value="">All Status</option>
+              <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+            </select>
+          </div>
+    </div>
+
+  
+    <div class="relative w-36 ">
+        <div class="absolute right-1  top-3 text-[var(--primary-foreground)] "><mat-icon>search</mat-icon></div>
+      <input id="name" type="text" [(ngModel)]="searchName" (input)="onFilterChange()" placeholder="Recherche" class="search-input"/>
+    </div>
+  </div>

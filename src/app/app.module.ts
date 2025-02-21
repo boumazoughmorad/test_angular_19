@@ -9,14 +9,15 @@ import {MatIconModule} from '@angular/material/icon';
 import { FeaturesModule } from './features/features.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     MatIconModule,
-    FeaturesModule
+    FeaturesModule,
   ],
   providers: [
     provideClientHydration(withEventReplay()),
