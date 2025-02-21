@@ -1,59 +1,56 @@
-# TestTechniqueAngular19
+# README - Test
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+## 1) Interfaces
 
-## Development server
+![Image Alt Text](Capture1.png)
+![Image Alt Text](Capture2.png)
+![Image Alt Text](Capture3.png)
+![Image Alt Text](Capture9.png)
 
-To start a local development server, run:
+## 2) Bibliothèques Utilisées
+- **Tailwind CSS** : Utilisé pour le stylisme et l'adaptabilité responsive.
+- **SweetAlert2** : Pour afficher des popups de confirmation (ex : suppression d'un produit).
+- **Material Icons** : Pour intégrer les icônes de l'application.
 
-```bash
-ng serve
-```
+## 3) Description du Projet
+J'ai divisé le projet en plusieurs composants afin d'assurer la réutilisabilité et la maintenabilité du code. J'ai appliqué le principe de **Single Responsibility** pour que chaque composant ait une seule responsabilité.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+L'utilisation de **Responsive Tailwind CSS** assure une adaptation fluide de l'application sur tous les types d'appareils.
 
-## Code scaffolding
+### 3.1) Structure du Projet
+![Image Alt Text](Capture7.png)
+- **entities** : Dossier contenant les interfaces de données (catégories et produits) avec leurs attributs.
+- **Features** : Dossier contenant les pages principales de l'application :
+  - `list-page` : Affichage de la liste des produits.
+  - `ajouter-page` : Formulaire d'ajout d'un produit.
+  - **Components** : Dossier contenant les composants réutilisables pour ces pages.
+- **Shared** : Dossier regroupant les composants partagés entre les pages, comme `header` et `navbar`.
+- **Utils** : Dossier contenant les fonctions utilitaires pour la gestion des données et du stockage local.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 3.2) Page d'Ajout de Produit (`ajouter-page`)
+![Image Alt Text](Capture5.png)
 
-```bash
-ng generate component component-name
-```
+Cette capture montre la structuration des composants dans la page d'ajout :
+- Composants partagés : `header`, `navbar`
+- Composants internes : `header-page`, `details-service`, `details-prix`
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 3.3) Page de Liste des Produits (`list-page`)
+![Image Alt Text](Capture6.png)
 
-```bash
-ng generate --help
-```
+Cette capture montre l'organisation des composants dans la liste des produits :
+- Composants partagés : `header`, `navbar`
+- Composants internes : `header-page`, `filter-list`, `table-list`, `pagination`, `action-item`
 
-## Building
+## 4) Processus d'Ajout d'un Produit
+1. **Interfaces** :
+   - J'ai créé des interfaces `Category` et `Produit`.
+   - Chaque produit a un attribut `category_id` pour l'associer à une catégorie.
+2. **Chargement des données** :
+   - Récupération des données (`categories`, `produits`) depuis le `localStorage`.
+   - Si les catégories sont absentes, des données par défaut sont créées.
+3. **Ajout d'un produit** :
+   - Lorsqu'un utilisateur clique sur "Créer", le produit est ajouté en prévisualisation.
+   - Il est ensuite stocké dans le `localStorage`.
 
-To build the project run:
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
