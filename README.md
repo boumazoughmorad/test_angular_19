@@ -1,7 +1,11 @@
 # README - Test
 
 ## 1) Interfaces
-//Ajoutez 4 captures d'écran des interfaces pour illustrer les différents écrans de l'application.
+
+![Image Alt Text](Capture1.png)
+![Image Alt Text](Capture2.png)
+![Image Alt Text](Capture3.png)
+![Image Alt Text](Capture9.png)
 
 ## 2) Bibliothèques Utilisées
 - **Tailwind CSS** : Utilisé pour le stylisme et l'adaptabilité responsive.
@@ -14,8 +18,7 @@ J'ai divisé le projet en plusieurs composants afin d'assurer la réutilisabilit
 L'utilisation de **Responsive Tailwind CSS** assure une adaptation fluide de l'application sur tous les types d'appareils.
 
 ### 3.1) Structure du Projet
-//(Capture d'écran de la structure du projet)
-
+![Image Alt Text](Capture7.png)
 - **entities** : Dossier contenant les interfaces de données (catégories et produits) avec leurs attributs.
 - **Features** : Dossier contenant les pages principales de l'application :
   - `list-page` : Affichage de la liste des produits.
@@ -25,14 +28,14 @@ L'utilisation de **Responsive Tailwind CSS** assure une adaptation fluide de l'a
 - **Utils** : Dossier contenant les fonctions utilitaires pour la gestion des données et du stockage local.
 
 ### 3.2) Page d'Ajout de Produit (`ajouter-page`)
-//(Capture d'écran de `ajouter-page`)
+![Image Alt Text](Capture5.png)
 
 Cette capture montre la structuration des composants dans la page d'ajout :
 - Composants partagés : `header`, `navbar`
 - Composants internes : `header-page`, `details-service`, `details-prix`
 
 ### 3.3) Page de Liste des Produits (`list-page`)
-//(Capture d'écran de `list-page`)
+![Image Alt Text](Capture6.png)
 
 Cette capture montre l'organisation des composants dans la liste des produits :
 - Composants partagés : `header`, `navbar`
