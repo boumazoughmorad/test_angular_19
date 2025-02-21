@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import Swal from 'sweetalert2';
 import { Produit } from '../../../entities/produit';
 import { getItem, setItem } from '../../../util/localStorage';
 import { SweetAlertService } from '../../../util/sweet-alert';
