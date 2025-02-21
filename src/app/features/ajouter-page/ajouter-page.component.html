@@ -1,0 +1,19 @@
+<div class="p-4">
+    <app-header-page-ajouter
+      title="Ajouter Service"
+      (onCreate)="addProduit()"
+      (onCancel)="resetForm()"
+    ></app-header-page-ajouter>
+  
+    <app-service-details
+      [service]="newService"
+      (onSubmit)="addProduit()"
+      (fileChange)="handleFileChange($event)"
+    ></app-service-details>
+  
+    <app-price-details
+      [price]="newPrix"
+      [tvaOptions]="tvaOptions"
+      (onSubmit)="addProduit()"
+    ></app-price-details>
+  </div>

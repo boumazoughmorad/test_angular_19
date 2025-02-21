@@ -1,0 +1,17 @@
+<div class="relative group">
+      <div class="hover:text-white hover:bg-[var(--primary)] text-[var(--primary)] shadow-sm rounded-[12px] p-1">
+      <mat-icon>{{ icon }}</mat-icon>
+    </div>
+  
+     <div *ngIf="havelist && (label || items.length > 0)" class="absolute hidden group-hover:flex flex-row w-auto left-full ml-2 top-0 z-50">
+      <mat-icon class="text-[var(--primary)]">arrow_left</mat-icon>
+      <div class="bg-[var(--primary)] p-2 rounded text-white">
+        <h4 *ngIf="label" class="underline whitespace-nowrap overflow-hidden truncate">{{ label }}</h4>
+  
+         <ul *ngIf="items.length > 0">
+            <li *ngFor="let item of items">{{ item }}</li>
+       
+            </ul>
+      </div>
+    </div>
+  </div>

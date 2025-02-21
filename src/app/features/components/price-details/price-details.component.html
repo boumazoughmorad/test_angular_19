@@ -1,0 +1,31 @@
+<div class="card">
+    <h2>Details du prix</h2>
+    <form (ngSubmit)="onSubmit.emit()">
+      <!-- Prix du vente -->
+      <div>
+        <label  for="prixVente">Prix du vente</label>
+        <input
+          class="sm:w-[40vw]"
+          id="prixVente"
+          type="number"
+          [(ngModel)]="price.prixVente"
+          name="prixVente"
+          required
+        />
+      </div>
+  
+      <!-- TVA -->
+      <div>
+        <label for="tva" >TVA</label>
+        <select
+          id="tva"
+          class=""
+          [(ngModel)]="price.tva"
+          name="tva"
+          required
+        >
+          <option *ngFor="let tva of tvaOptions" [value]="tva">{{ tva }}%</option>
+        </select>
+      </div>
+    </form>
+  </div>

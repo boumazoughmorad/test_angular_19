@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @layer base {
+    :root {
+        --backgroud : rgb(255,255,255);
+        --foreground:rgb(41, 40, 40);
+        
+        --primary: rgb(72, 3, 201);
+        --primary-foreground: rgb(132, 65, 255);
+  
+        --button-backgroud: rgb(166, 111, 197);
+        --button-backgroud-foreground :rgb(224, 224, 224);
+
+        --input-backgroud: rgb(248, 248, 248);
+
+        --radius: 0.5rem;
+
+    }
+}
+}
+@layer base {
+    body {
+      @apply bg-[var(--background)] text-[var(--foreground)] text-[10px] font-bold;
+    }
+  
+    h1 {
+      @apply  text-[14px] font-bold text-[var(--primary)];
+    }
+  
+    h2 {
+      @apply  text-[12px]  font-normal text-[var(--primary-foreground)] mb-4;
+    }
+  
+    input,
+    textarea,
+    select{
+        @apply p-4  bg-[var(--input-backgroud)]  border-1 border-[var(--primary-foreground)] rounded-lg focus:ring-blue-500 focus:border-[var(--primary)] block w-full sm:w-[25vw]   h-[35px];
+    }
+  
+    label{
+        @apply block mb-2;
+    }
+
+    Form{
+        @apply flex sm:flex-row flex-col sm:items-center mb-10 gap-2 justify-between;
+    }
+    .card{
+        @apply mt-6 p-4 shadow-md rounded-lg
+    }
+
+    .btn-gray{
+        @apply  bg-[var(--button-backgroud-foreground)]  text-black hover:text-[var(--button-backgroud-foreground)] hover:bg-black
+    }
+    .btn{
+        @apply  px-12 py-2 rounded-[20px]
+    }
+    .btn-purple{
+        @apply bg-[var(--button-backgroud)] text-white hover:text-[var(--button-backgroud)] hover:bg-white hover:border
+    }
+
+    .page-header{
+        @apply flex sm:flex-row flex-col gap-4 sm:justify-between items-center
+    }
+  }
